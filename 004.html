@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gsap</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #0af;
+        }
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: #ff8800;
+        }
+    </style>
+</head>
+<body>
+    <h1>repeat</h1>
+    <div class="box"></div>
+    
+    <h1>delay</h1>
+    <div class="box2"></div>
+    <script>
+        gsap.defaults({duration:5});
+
+        gsap.to('.box',{x:500,ease:"bounce"})
+        gsap.to('.box2',{x:500,ease:'linear'})
+
+
+    </script>
+</body>
+</html>

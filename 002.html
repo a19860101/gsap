@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gsap</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #0af;
+        }
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: #ff8800;
+        }
+    </style>
+</head>
+<body>
+    <h1>gsap.from</h1>
+    <div class="box"></div>
+    
+    <h1>gsap.fromTo</h1>
+    <div class="box2"></div>
+    <script>
+        gsap.defaults({duration:1});
+        gsap.from('.box',{
+            opacity:0,
+            x:-50
+        });
+
+        gsap.fromTo('.box2',{x:-100,y:-100,opacity:0},{x:600,y:800,opacity:1,rotation:360,duration:5})
+
+    </script>
+</body>
+</html>
